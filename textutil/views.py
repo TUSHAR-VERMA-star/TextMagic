@@ -49,23 +49,3 @@ def analzye(request):
         a={"what":"Number Of Lower And Upper Case","original_text":djtext,"afterAnalyzing":"lower,upper","l":l,"u":u}
         return render(request,'analyse.html',a)
 
-# def delSpace(request):
-#     djtext=request.GET.get('text','default ')
-#     s=""
-#     for i in djtext:
-#         if i!=' ':
-#             s=s+i
-#     return HttpResponse(s)
-
-def removeDigits(request):
-    djtext=request.GET.get('text','default ')
-    s=""
-    q='''123456789'''
-    for i in djtext:
-        if i not in q:
-            s=s+i
-    a={"what":"remove all digits","original_text":djtext,"afterAnalyzing":s}
-    return render(request,'analyse.html',a)
-
-# def uppercase(request):
-#     return HttpResponse("string in upper case")
