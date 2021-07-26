@@ -15,7 +15,7 @@ def analyze(request):
     numberremover = request.POST.get('numberremover','off')
     fulltextanalyze =request.POST.get('fulltextanalyze','off')
     if removepunc == "on":
-        punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+        punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~+_-=#@$!%^^&()*?<>":}{|\[];'/.,'''
         analyzed = ""
         for char in djtext:
             if char not in punctuations:
